@@ -27,16 +27,6 @@ const GridGallery = () => {
     return (
         <div className={styles.grid}>
             { gridItems }
-            <div>
-                <img className={styles.gridCell} src="https://picsum.photos/150?random=1" alt="grid" />
-            </div>
-            <div>
-                <img className={styles.gridCell} src="https://picsum.photos/150?random=2" alt="grid" />
-            </div>
-            <div>
-                <img className={styles.gridCell} src="https://picsum.photos/150?random=3" alt="grid" />
-            </div>
-
         </div>
     )
 }
