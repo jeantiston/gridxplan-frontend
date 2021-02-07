@@ -30,10 +30,8 @@ const BottomMenu = () => {
     ]
 
     const menuItems = menuMap.map( item => {
-            console.log(item)
-            // return <h1>{ item }</h1>
             return (
-                <div className={styles.menuItem}>
+                <div className={styles.menuItem} key={item.name}>
                     <FontAwesomeIcon icon={item.icon} size="2x" className={styles.icon}/>
                     <sub className={styles.menuText}>{ item.name }</sub>
                 </div>
