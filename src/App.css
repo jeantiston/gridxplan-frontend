@@ -14,6 +14,8 @@
     --font-text: "Roboto", sans-serif;
 }
 
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 body {
     background-color: var(--lighter-gray);
     color: var(--dark);
