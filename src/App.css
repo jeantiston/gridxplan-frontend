@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+    --light: #ffffff;
+    --dark: #0F003E;
+    --gray: #848484;
+    --light-gray: #AEAEAE;
+    --lighter-gray: #F4F4F4;
+    --primary: #512DA8;
+    --secondary: #7953D2;
+    --overlay: rgb(121,83,210,0.7);
+    --danger: #D40015;
+    --font-primary: "Pacifico", sans-serif;
+    --font-text: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--lighter-gray);
+    color: var(--dark);
+    font-family: var(--font-text);
+    font-weight: 400;
+}
+
+svg {
+    color: var(--secondary);
+    padding: 10px;
+}
