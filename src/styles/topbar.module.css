@@ -1,4 +1,4 @@
-.grid {
+.flex {
     background-color: var(--light);
     display: flex;
     align-items: center;

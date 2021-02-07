@@ -9,7 +9,7 @@ import TopBarStyles from '../styles/topbar.module.css'
 
 const TopBar = () => {
     return (
-        <div className={TopBarStyles.grid}>
+        <div className={TopBarStyles.flex}>
             <div>
                 <img className={TopBarStyles.profilePhoto} src={profilePhoto} alt="profile" />
             </div>
