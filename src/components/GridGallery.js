@@ -7,7 +7,7 @@ const GridGallery = () => {
     useEffect(() => {
         let imgList = []
         for (let i = 0 ; i <= 15 ; i++) {
-            imgList.push("https://picsum.photos/150?random=" + i.toString())
+            imgList.push("https://picsum.photos/300?random=" + i.toString())
         }
         const items = imgList.map((img,i) => {
             return (
