@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faTag, faFileImage, faHashtag, faShareAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,25 +17,27 @@ const BottomMenu = () => {
             'icon': faTag
         },
         {   'name': 'add image',
-            'path': '/',
+            'path': '/add',
             'icon': faFileImage
         },
         {   'name': 'hashtags',
-            'path': '/',
+            'path': '/hashtags',
             'icon': faHashtag
         },
         {   'name': 'share',
-            'path': '/',
+            'path': '/share',
             'icon': faShareAlt
         }
     ]
 
     const menuItems = menuMap.map( item => {
             return (
-                <div className={styles.menuItem} key={item.name}>
-                    <FontAwesomeIcon icon={item.icon} size="2x" className={styles.icon}/>
-                    <sub className={styles.menuText}>{ item.name }</sub>
-                </div>
+                <NavLink exact to={item.path} >
+                    <div className={styles.menuItem} key={item.name}>
+                        <FontAwesomeIcon icon={item.icon} size="2x" className={styles.icon} />
+                        <sub className={styles.menuText}>{ item.name }</sub>
+                    </div>
+                </NavLink>
             )
         })
     

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +18,7 @@ const TopBar = () => {
                 <img className={TopBarStyles.logo} src={logo} alt="GridXPlanner logo" />
             </div>
             <div>
-                <FontAwesomeIcon icon={faCog} size="2x" />
+                <NavLink to="/settings"><FontAwesomeIcon icon={faCog} size="2x" /></NavLink>  
             </div>
         </div>
     )

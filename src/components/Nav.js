@@ -5,7 +5,10 @@ import BottomMenu from '../components/BottomMenu'
 
 const Nav = ({ children }) => {
     return (
-        <div>
+        <div style={{
+            minHeight: "100vh",
+            minWidth: "100vw"
+        }}>
             <TopBar />
                 {children}
             <BottomMenu />

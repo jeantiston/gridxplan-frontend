@@ -6,7 +6,17 @@ const EditPost = () => {
     console.log("hello: ", postId)
     return (
         <div>
-            <h1>sasasssssscdsdsdsdsdssssfdfdgdgg Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</h1>
+            {/* <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1>
+            <h1> Edit Post</h1> */}
             {/* <h2> { postId } </h2> */}
         </div>
     )
