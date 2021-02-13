@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faTag, faFileImage, faHashtag, faShareAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,12 +30,20 @@ const BottomMenu = () => {
         }
     ]
 
+    const location = useLocation()
+
+    const isActive = (path) => {
+        if (path === location.pathname) {
+            return styles.active
+        }
+    }
+
     const menuItems = menuMap.map( item => {
             return (
-                <NavLink exact to={item.path} >
-                    <div className={styles.menuItem} key={item.name}>
-                        <FontAwesomeIcon icon={item.icon} size="2x" className={styles.icon} />
-                        <sub className={styles.menuText}>{ item.name }</sub>
+                <NavLink exact to={item.path} activeClassName={styles.active} key={item.name}>
+                    <div className={styles.menuItem} >
+                        <FontAwesomeIcon icon={item.icon} size="2x" className={ [styles.icon, isActive(item.path)].join(" ") } />
+                        <sub className={[styles.menuText, isActive(item.path)].join(" ")}>{ item.name }</sub>
                     </div>
                 </NavLink>
             )
