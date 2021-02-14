@@ -12,6 +12,7 @@ import Nav from './components/Nav'
 import GridGallery from './pages/GridGallery'
 import EditPost from './pages/EditPost'
 import Hashtags from './pages/Hashtags'
+import Share from './pages/Share'
 
 
 
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route exact path="/hashtags">
               <Hashtags />
+            </Route>
+            <Route exact path="/share">
+              <Share />
             </Route>
           </Nav>
         </Switch>
