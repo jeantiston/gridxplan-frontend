@@ -1,5 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/settings.module.css'
 
@@ -9,7 +11,7 @@ const Settings = () => {
     console.log(errors);
 
     return (
-        <div>
+        <div className={styles.settings}>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.editPost}>
             {/* <h1>Settings</h1> */}
                 <div className={styles.form}>
@@ -32,6 +34,10 @@ const Settings = () => {
                     <input type="text" placeholder="instagram username" name="account" ref={register} />
                 </div>
             </form>
+            <div className={styles.logoutButton}>
+                <FontAwesomeIcon icon={faPowerOff} size="2x" />
+                <sub className={styles.sub}>logout</sub>
+            </div>
         </div>
     )
 }

@@ -1,3 +1,10 @@
+.settings{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .list{
     margin: 5px 10px 0 10px;
     padding: 20px 0 0 0;
@@ -9,6 +16,17 @@
 }
 
 .form > * {
-    /* border: red 5px solid; */
     flex: 1;
+}
+
+.logoutButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-end; */
+    /* border: springgreen 3px solid; */
+}
+
+.sub{
+    color: var(--secondary);
 }
