@@ -33,3 +33,34 @@ a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
 }
+
+h2{
+    margin: 0;
+    padding: 0px 10px;
+    font-size: large;
+}
+
+p{
+    padding: 0;
+    margin: 3px 0;
+}
+
+input, select, textarea{
+    background-color: #ffffff;
+    margin: 10px 0px;
+    border: none;
+    color: var(--dark);
+    /* border-radius: 5px; */
+    /* min-height: 30px; */
+    padding: 5px 10px;
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+}
+
+textarea{
+    min-height: 150px;
+}
