@@ -10,7 +10,11 @@ const Nav = ({ children }) => {
             minWidth: "100vw"
         }}>
             <TopBar />
-                {children}
+                <div style={{
+                    margin: "60px 0"
+                }}>
+                    {children}
+                </div>
             <BottomMenu />
         </div>
     )
