@@ -11,6 +11,7 @@ import Nav from './components/Nav'
 
 import GridGallery from './pages/GridGallery'
 import EditPost from './pages/EditPost'
+import Hashtags from './pages/Hashtags'
 
 
 
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/edit/:postId">
               <EditPost />
+            </Route>
+            <Route exact path="/hashtags">
+              <Hashtags />
             </Route>
           </Nav>
         </Switch>
