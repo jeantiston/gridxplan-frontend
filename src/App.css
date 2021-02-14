@@ -41,8 +41,8 @@ h2{
 }
 
 p{
-    padding: 0;
-    margin: 3px 0;
+    /* padding: 0; */
+    padding: 3px 10px 0 10px;
 }
 
 input, select, textarea{
@@ -52,7 +52,7 @@ input, select, textarea{
     color: var(--dark);
     /* border-radius: 5px; */
     /* min-height: 30px; */
-    padding: 5px 10px;
+    padding: 5px 20px;
     font-family: var(--font-text);
     font-size: 0.9rem;
 }

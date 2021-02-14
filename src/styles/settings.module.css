@@ -1,0 +1,14 @@
+.list{
+    margin: 5px 10px 0 10px;
+    padding: 20px 0 0 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form > * {
+    /* border: red 5px solid; */
+    flex: 1;
+}

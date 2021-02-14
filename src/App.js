@@ -13,6 +13,7 @@ import GridGallery from './pages/GridGallery'
 import EditPost from './pages/EditPost'
 import Hashtags from './pages/Hashtags'
 import Share from './pages/Share'
+import Settings from './pages/Settings'
 
 
 
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route exact path="/share">
               <Share />
+            </Route>
+            <Route exact path="/settings">
+              <Settings />
             </Route>
           </Nav>
         </Switch>
