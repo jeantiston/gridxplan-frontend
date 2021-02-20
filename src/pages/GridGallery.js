@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 
 import styles from '../styles/gridgallery.module.css'
 
@@ -11,9 +12,9 @@ const GridGallery = () => {
         }
         const items = imgList.map((img,i) => {
             return (
-                <div key={i}>
+                <Link to={"/edit/"+ i.toString()} key={i}>
                     <img className={styles.gridCell} src={img} alt={i} key={i} />
-                </div>
+                </Link>
             )
         })
 
