@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
+import GridImage from '../components/GridImage'
+import GridSquare from '../components/GridSquare'
 import styles from '../styles/gridgallery.module.css'
 
 const GridGallery = () => {
@@ -26,9 +30,15 @@ const GridGallery = () => {
 
 
     return (
-        <div className={styles.grid}>
-            { gridItems }
-        </div>
+        <DndProvider backend={HTML5Backend}>
+            <div className={styles.grid}>
+                <GridSquare>
+                    {/* <p>image</p> */}
+                    <GridImage id="123" />
+                </GridSquare>
+                { gridItems }
+            </div>
+        </DndProvider>
     )
 }
 
