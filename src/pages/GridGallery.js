@@ -32,7 +32,7 @@ const GridGallery = () => {
     return (
         <DndProvider backend={HTML5Backend}>
             <div className={styles.grid}>
-                <GridSquare>
+                <GridSquare pos="1">
                     {/* <p>image</p> */}
                     <GridImage id="123" />
                 </GridSquare>
