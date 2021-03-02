@@ -1,14 +1,10 @@
 import React, {useState, useCallback} from 'react'
-// import { Link } from 'react-router-dom'
 import { DndProvider, TouchTransition, MouseTransition } from 'react-dnd-multi-backend'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { TouchBackend } from 'react-dnd-touch-backend'
-// import { HTML5Backend } from 'react-dnd-html5-backend'
-// import { HTML5toTouch } from 'rdndmb-html5-to-touch'
 import update from 'immutability-helper'
 
 import GridImage from '../components/GridImage'
-// import GridSquare from '../components/GridSquare'
 import styles from '../styles/gridgallery.module.css'
 
 const GridGallery = () => {
@@ -62,24 +58,6 @@ const GridGallery = () => {
         },
     ]);
 
-    // const [gridItems, setGridItems] = useState([])
-    // useEffect(() => {
-    //     let imgList = []
-    //     for (let i = 0 ; i <= 15 ; i++) {
-    //         imgList.push("https://picsum.photos/300?random=" + i.toString())
-    //     }
-    //     const items = imgList.map((img,i) => {
-    //         return (
-    //             <Link to={"/edit/"+ i.toString()} key={i}>
-    //                 <img className={styles.gridCell} src={img} alt={i} key={i} />
-    //             </Link>
-    //         )
-    //     })
-
-    //     setGridItems(items)
-
-    // },[])
-
     const moveCard = useCallback((dragIndex, hoverIndex) => {
         const dragCard = images[dragIndex];
         setImages(update(images, {
@@ -97,14 +75,8 @@ const GridGallery = () => {
     };
 
     return (
-        // <DndProvider backend={HTML5Backend}>
         <DndProvider options={HTML5toTouch} >
             <div className={styles.grid}>
-                {/* <GridSquare pos="1"> */}
-                    {/* <p>image</p> */}
-                {/* <GridImage id="123" /> */}
-                {/* </GridSquare> */}
-                {/* { gridItems } */}
                 { images.map((card, i) => renderCard(card, i)) }
             </div>
         </DndProvider>
