@@ -1,7 +1,10 @@
 import React, {useState, useCallback} from 'react'
 // import { Link } from 'react-router-dom'
-import { DndProvider } from 'react-dnd'
+import { DndProvider, TouchTransition, MouseTransition } from 'react-dnd-multi-backend'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import { TouchBackend } from 'react-dnd-touch-backend'
+// import { HTML5Backend } from 'react-dnd-html5-backend'
+// import { HTML5toTouch } from 'rdndmb-html5-to-touch'
 import update from 'immutability-helper'
 
 import GridImage from '../components/GridImage'
@@ -9,6 +12,25 @@ import GridImage from '../components/GridImage'
 import styles from '../styles/gridgallery.module.css'
 
 const GridGallery = () => {
+
+    const HTML5toTouch = {
+        backends: [
+        {
+            id: 'html5',
+            backend: HTML5Backend,
+            transition: MouseTransition,
+            preview: true,
+        },
+        {
+            id: 'touch',
+            backend: TouchBackend,
+            options: {enableMouseEvents: true},
+            preview: true,
+            transition: TouchTransition,
+        },
+        ],
+    }
+
     const [images, setImages] = useState([
         {
             id: 1,
@@ -75,7 +97,8 @@ const GridGallery = () => {
     };
 
     return (
-        <DndProvider backend={HTML5Backend}>
+        // <DndProvider backend={HTML5Backend}>
+        <DndProvider options={HTML5toTouch} >
             <div className={styles.grid}>
                 {/* <GridSquare pos="1"> */}
                     {/* <p>image</p> */}
