@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { useDrag, useDrop } from 'react-dnd'
 import { Link } from 'react-router-dom'
 
@@ -7,6 +8,7 @@ import styles from '../styles/gridgallery.module.css'
 
 const GridImage = ({ id, index, moveCard }) => {
     const ref = useRef(null)
+    const dispatch = useDispatch();
     
     const [{ handlerId }, drop] = useDrop({
         accept: ITEM_TYPE,
@@ -50,7 +52,7 @@ const GridImage = ({ id, index, moveCard }) => {
             //     return;
             // }
             // Time to actually perform the action
-            moveCard(dragIndex, hoverIndex);
+            dispatch(moveCard({dragIndex: dragIndex, hoverIndex: hoverIndex}))
             // Note: we're mutating the monitor item here!
             // Generally it's better to avoid mutations,
             // but it's good here for the sake of performance
