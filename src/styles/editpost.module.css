@@ -33,3 +33,8 @@
     padding: 0 10px;
     color: var(--gray);
 }
+
+.subErr{
+    padding: 0 10px;
+    color: var(--danger);
+}
