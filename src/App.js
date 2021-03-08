@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import Nav from './components/Nav'
+import PostBar from './components/PostBar'
 
 import GridGallery from './pages/GridGallery'
 import EditPost from './pages/EditPost'
@@ -28,7 +29,9 @@ function App() {
               <GridGallery />
             </Route>
             <Route exact path="/edit/:postId">
-              <EditPost />
+              <PostBar>
+                <EditPost />
+              </PostBar>
             </Route>
             <Route exact path="/hashtags">
               <Hashtags />
