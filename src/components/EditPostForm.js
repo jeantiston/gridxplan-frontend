@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import   { useParams } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 
 import styles from '../styles/editpost.module.css'
@@ -10,25 +9,11 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
     const onSubmit = data => console.log(data);
     console.log(errors);
 
-    // let { postId } = useParams();
-    // console.log("hello: ", postId)
-
-    // const [imgDetails, setImgDetails] = useState({
-    //     id: postId,
-    //     imgUrl: "https://picsum.photos/300?random=" + postId.toString(),
-    //     caption: 'lorem ipsum dolor',
-    //     status: '',
-    //     schedule: '',
-    //     hashtags: ['#planner', '#planning', '#lovingit']
-    // })
-
     const [captionSubStyle, setCaptionSubStyle ] = useState(styles.sub)
     const [hashtagSubStyle, setHashtagSubStyle ] = useState(styles.sub)
     const [err, setErr] = useState(false)
 
     const handleCaption = (maxCount, input) => {
-        // console.log("maxCount: ", maxCount)
-        // console.log("input: ", input)
 
         setImgDetails({...imgDetails, caption: input})
 
@@ -50,7 +35,6 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
             return el !== "";
         });
 
-        // console.log("hashtag: ", filtered)
         setErr(false)
 
         for (let hashtag of filtered) {
@@ -64,7 +48,6 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
 
         setImgDetails({...imgDetails, hashtags: hashtags})
 
-        // console.log("split#: ", input.split("#"))
         const count = input.split("#").length - 1
         setHashtagCount(count)
 
@@ -78,7 +61,6 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
 
     return (
         <div >
-            {/* <h1> Edit Post </h1> */}
             <form onSubmit={handleSubmit(onSubmit)} className={styles.editPost}>
                 <div className={styles.postPhotoDetails} >
                     <div>
