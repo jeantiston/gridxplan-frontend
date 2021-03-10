@@ -15,7 +15,24 @@ const EditPost = () => {
         caption: 'lorem ipsum dolor',
         status: 'in progress',
         schedule: 'Jan 1, 2021 - 8:00pm',
-        hashtags: ['#planner', '#planning', '#lovingit']
+        hashtags: ['#planner', '#planning', '#lovingit'],
+        comments: [
+            {
+                id: 0,
+                user: 'Jack',
+                comment: 'Can you make that photo a bit brighter'
+            },
+            {
+                id: 1,
+                user: 'Jack',
+                comment: 'Fantastic! Thanks. It’s good to go.'
+            },
+            {
+                id: 2,
+                user: 'Molly',
+                comment: 'Add some more emojis in the caption.'
+            }
+        ]
     })
 
     return (

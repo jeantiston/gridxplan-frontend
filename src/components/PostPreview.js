@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from '../styles/editpost.module.css'
 
 const EditPostForm = ({ imgDetails }) => {
+
+    const [msg, setMsg] = useState('')
+    const onSubmit = data => console.log(data);
+
+    const comments = imgDetails.comments.map( comment => {
+        return (
+            <div key={ comment.id }>
+                <p><b>{ comment.user }</b></p>
+                <p>{ comment.comment }</p>
+            </div>
+        )
+    })
 
     return (
         <div >
@@ -29,6 +41,17 @@ const EditPostForm = ({ imgDetails }) => {
 
                 <div>
                     <h2>Comments</h2>
+                    <form onSubmit={ data => onSubmit(data)} className={styles.editPost}>
+                        <div className={styles.captionDetails}>
+                            <input type="text" 
+                                name="caption"
+                                value={ msg }
+                                onChange={ e => setMsg(e.target.value) }
+                                // ref={register({maxLength: 2100})} 
+                            />
+                        </div>
+                    </form>
+                    { comments }
                 </div>
 
         </div>
