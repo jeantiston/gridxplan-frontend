@@ -44,7 +44,7 @@ const EditPostForm = ({ imgDetails }) => {
                     <form onSubmit={ data => onSubmit(data)} className={styles.editPost}>
                         <div className={styles.captionDetails}>
                             <input type="text" 
-                                name="caption"
+                                name="comment"
                                 value={ msg }
                                 onChange={ e => setMsg(e.target.value) }
                                 // ref={register({maxLength: 2100})} 

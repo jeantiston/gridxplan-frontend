@@ -7,13 +7,15 @@ import PostPreview from '../components/PostPreview'
 
 const EditPost = () => {
 
+    const [editSection, setEditSection] = useState(true)
+
     let { postId } = useParams()
     
     const [imgDetails, setImgDetails] = useState({
         id: postId,
         imgUrl: "https://picsum.photos/300?random=" + postId.toString(),
         caption: 'lorem ipsum dolor',
-        status: 'in progress',
+        status: 'need captions',
         schedule: 'Jan 1, 2021 - 8:00pm',
         hashtags: ['#planner', '#planning', '#lovingit'],
         comments: [
@@ -37,9 +39,13 @@ const EditPost = () => {
 
     return (
         <div>
-            <PostBar>
-                {/* <EditPostForm imgDetails={imgDetails} setImgDetails={setImgDetails} /> */}
-                <PostPreview imgDetails={imgDetails} />
+            <PostBar editSection={editSection} setEditSection={setEditSection} >
+                { editSection ?
+                    <EditPostForm imgDetails={imgDetails} setImgDetails={setImgDetails} />
+                    : <PostPreview imgDetails={imgDetails} />
+                }
+                
+                
             </PostBar>
 
         </div>
