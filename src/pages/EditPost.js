@@ -15,7 +15,7 @@ const EditPost = () => {
         id: postId,
         imgUrl: "https://picsum.photos/300?random=" + postId.toString(),
         caption: 'lorem ipsum dolor',
-        status: 'need captions',
+        status: 'revise',
         schedule: 'Jan 1, 2021 - 8:00pm',
         hashtags: ['#planner', '#planning', '#lovingit'],
         comments: [

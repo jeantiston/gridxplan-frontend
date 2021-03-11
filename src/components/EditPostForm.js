@@ -68,7 +68,7 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
                     </div>
                     <div className={styles.postDetails}>
                         <h2>status</h2>
-                        <select name="status" ref={register}>
+                        <select value={ imgDetails.status } onChange={ e => setImgDetails({...imgDetails, status: e.target.value}) } name="status" ref={register}>
                             <option value="need captions">need captions</option>
                             <option value="need hashtags"> need hashtags</option>
                             <option value="revise"> revise</option>
