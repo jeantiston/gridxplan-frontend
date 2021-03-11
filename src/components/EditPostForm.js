@@ -6,7 +6,7 @@ import styles from '../styles/editpost.module.css'
 const EditPostForm = ({imgDetails, setImgDetails}) => {
 
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => console.log("Sub");
     console.log(errors);
 
     const [captionSubStyle, setCaptionSubStyle ] = useState(styles.sub)
@@ -88,6 +88,7 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
                         ref={register({maxLength: 2100})} 
                     />
                     <sub className={captionSubStyle}>{ imgDetails.caption.length }/2100</sub>
+                    {/* {errors.caption && "caption error"} */}
 
                     <textarea 
                         name="hashtags" 
@@ -97,6 +98,8 @@ const EditPostForm = ({imgDetails, setImgDetails}) => {
                     />
                     <sub className={hashtagSubStyle}>{ hashtagCount }/30</sub>
                     { err && <sub className={styles.subErr}>Wrong hashtag format</sub> }
+
+                    <button type="submit" value="Submit">Submit</button>
                 </div>
             </form>
         </div>
